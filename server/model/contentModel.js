@@ -15,7 +15,7 @@ const contentModel = mongoose.Schema({
     imageID:{
         type: String
     },
-    seller:{
+    category:{
         type: String
     },
     ratings: [{ type: mongoose.Schema.Types.ObjectId, ref: "ratings"}],

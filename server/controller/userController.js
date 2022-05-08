@@ -43,3 +43,60 @@ const signInUser = async (req, res) =>{
     }
 }
 
+
+const getUsers = async (req, res) =>{
+    try {
+
+        const user = await userModel.find()
+        res.status(200).json({
+            status: `success`,
+            data: user
+        })
+        
+    } catch (error) {
+        res.status(500).json({
+            message: error.message
+        })
+    }
+}
+
+
+const getUser = async (req, res) =>{
+    try {
+
+        const user = await userModel.findById(req.params.id)
+        res.status(200).json({
+            status: `one user`,
+            data: user
+        })
+        
+    } catch (error) {
+        res.status(500).json({
+            message: error.message
+        })
+    }
+}
+
+
+const deleteUser = async (req, res) =>{
+    try {
+
+        await userModel.findByIdAndDelete(req.params.id)
+        res.status(200).json({
+            status: `Deleted`
+        })
+        
+    } catch (error) {
+        res.status(500).json({
+            message: error.message
+        })
+    }
+}
+
+
+module.exports = {
+    signInUser,
+    getUser,
+    getUsers,
+    deleteUser
+}

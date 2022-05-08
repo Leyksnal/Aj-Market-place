@@ -2,7 +2,7 @@ import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Header from './components/Header/Header'
 import Home from './components/Home/Home'
-import Service from './components/Services/ServiceSlider'
+import Market from './components/Services/Market'
 
 export default function App() {
   return (
@@ -10,7 +10,7 @@ export default function App() {
       <Header/>
       <Routes>
         <Route path={'/'} element={<Home/>}/>
-        <Route path={'/service'} element={<Service/>}/>
+        <Route path={'/card'} element={<Market/>}/>
       </Routes>
     </BrowserRouter>
   )

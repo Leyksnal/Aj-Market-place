@@ -14,7 +14,7 @@ export default function Header() {
         <Press>
           <Action to={'/login'}><Seller>Become a seller</Seller></Action>
           <Action to={'/login'}><Seller>Sign In</Seller></Action>
-          <Action to={'/service'}><Button>Join</Button></Action>
+          <Action to={'/card'}><Button>Join</Button></Action>
         </Press>
       </Wrapper>
     </Container>

@@ -21,30 +21,30 @@ export default function ContentDetail() {
                 </Rating>
             </Tile>
             <Gallery>
-                <Img />
+                <Img src='/assets/s3.jpg'/>
                 <Bt>
-                    <Img />
-                    <Img />
-                    <Img />
-                    <Img />
-                    <Img />
-                    <Img />
-                    <Img />
+                    <Subimage src='/assets/s1.jpg'/>
+                    <Subimage src='/assets/s2.jpg'/>
+                    <Subimage src='/assets/s3.jpg'/>
+                    <Subimage src='/assets/s4.jpg'/>
+                    <Subimage src='/assets/s3.jpg'/>
+                    <Subimage src='/assets/s2.jpg'/>
+                    <Subimage src='/assets/s1.jpg'/>
                 </Bt>
             </Gallery>
             <Sub>About This Gig</Sub>
             <Info>First impressions last. Brands need to go much further than their visual identity. How your brand looks and feels is essential for creating a good first impression, especially on social media. Your social profile is a very important part of your brand, and with the right design, you can attract the right type of customers, look professional, and beat your competition! My design skills can really help to set your business above everyone else.</Info>
             <Sub>About The Seller</Sub>
             <Seller>
-                <Ava>
-                    <Img />
+                <Ava2>
+                    <SellerImg src='/assets/s1.jpg'/>
                     <Level>
-                        <p>Level Two</p>
+                        <span>Level Two</span>
                     </Level>
-                </Ava>
+                </Ava2>
                 <Detail>
                     <Name>fernandobengua</Name>
-                    <Level>Branding and Social Media Expert</Level>
+                    <Level2>Branding and Social Media Expert</Level2>
                     <Rating>
                         <AiFillStar/>
                         <AiFillStar/>
@@ -64,69 +64,142 @@ export default function ContentDetail() {
                 <Bottom>Hello, my name is Fernando. I am an Art and Creative Director from Brazil with a background in Design and the Arts. With more than 15 years of experience, I have worked in advertising, visual identity, branding, campaign direction and social media content with some prominent international fashion and lifestyle brands from around world. Globetrotter and curious by nature, I'm currently living in the Spanish capital, Madrid</Bottom>
             </Frame>
         </Wrapper>
+        <Second></Second>
     </Container>
   )
 }
 
 
 
+const Subimage = styled.img`
+width: 100px;
+height: 70px;
+object-fit:  cover;
+`;
+const Second = styled.div`
+width: 450px;
+height: 700px;
+background-color: green;
+margin-right: 40px;
+`;
 const Container = styled.div`
 padding-top: 60px;
 display: flex;
-justify-content: center;
-align-items: center;
+justify-content: space-between;
 width: 100%;
 min-height: calc(100vh - 80px);
 `;
 const Wrapper = styled.div`
 display: flex;
 flex-direction: column;
-width: 95%;
+background-color: cyan;
+width: 55%;
+margin-left: 40px;
 `;
-const Title = styled.div`
-
+const Title = styled.h2`
+font-size: 1.8rem;
 `;
 const Tile = styled.div`
-
+display: flex;
+width: 75%;
+justify-content: space-between;
+align-items: center;
 `;
 const Gallery = styled.div`
-
+background-color: brown;
+width: 100%;
+height: 450px;
+margin-top: 20px;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
 `;
 const Bt = styled.div`
-
+display: flex;
+justify-content: space-between;
+width: 100%;
 `;
 const Seller = styled.div`
-
+background-color: gray;
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 400px;
 `;
-const Info = styled.div`
-
+const Info = styled.p`
+margin-top: -10px;
 `;
 const Ava = styled.div`
+background-color: red;
+width: 40px;
+height:40px;
+border-radius: 50%;
+`;
+const Ava2 = styled.div`
+display: flex;
+width: 110px;
+align-items: flex-end;
+position: relative;
+`;
+const Img = styled.img`
+width: 100%;
+height: 80%;
+object-fit:  cover;
+`;
+const SellerImg = styled.img`
+width: 110px;
+height: 110px;
+object-fit:  cover;
+background-color: white;
+border-radius: 50%;
 
 `;
-const Img = styled.div`
-
-`;
-const Sub = styled.div`
-
+const Sub = styled.h2`
+margin-top: 20px;
+font-size: 1.2rem;
 `;
 const Detail = styled.div`
+
+`;
+const Level2 = styled.div`
 
 `;
 const Name = styled.div`
 
 `;
 const Level = styled.div`
-
+background-color: #9D1FDF;
+width: 45px;
+height: 45px;
+border-radius: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+color: #fff;
+position: absolute;
+right: 0px;
+span{
+    font-size: 0.5rem;
+}
 `;
 const Rating = styled.div`
-
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 160px;
 `;
 const Count = styled.div`
 
 `;
-const Button = styled.div`
-
+const Button = styled.button`
+width: 150px;
+height: 40px;
+outline: none;
+border: solid 2px #fff;
+background-color: transparent;
+font-size: 1rem;
+font-weight: 600;
 `;
 const Frame = styled.div`
 

@@ -57,10 +57,20 @@ export default function ContentDetail() {
                 </Detail>
             </Seller>
             <Frame>
-                <Top>
-                    <Where>From</Where>
-                    <Where>Spain</Where>
-                </Top>
+                <Holder>
+                    <Top>
+                        <Where>Country</Where>
+                        <Where>Spain</Where>
+                    </Top>
+                    <Top>
+                        <Where>Occupation</Where>
+                        <Where>Lawyer</Where>
+                    </Top>
+                    <Top>
+                        <Where>Gender</Where>
+                        <Where>Female</Where>
+                    </Top>
+                </Holder>
                 <Bottom>Hello, my name is Fernando. I am an Art and Creative Director from Brazil with a background in Design and the Arts. With more than 15 years of experience, I have worked in advertising, visual identity, branding, campaign direction and social media content with some prominent international fashion and lifestyle brands from around world. Globetrotter and curious by nature, I'm currently living in the Spanish capital, Madrid</Bottom>
             </Frame>
         </Wrapper>
@@ -82,7 +92,7 @@ border-radius: 50%;
 `;
 const Subimage = styled.img`
 width: 100px;
-height: 70px;
+height: 80px;
 object-fit:  cover;
 `;
 const Second = styled.div`
@@ -90,6 +100,7 @@ width: 450px;
 height: 700px;
 background-color: green;
 margin-right: 40px;
+margin-top: 150px;
 `;
 const Container = styled.div`
 padding-top: 60px;
@@ -97,11 +108,11 @@ display: flex;
 justify-content: space-between;
 width: 100%;
 min-height: calc(100vh - 80px);
+margin-bottom: 20px;
 `;
 const Wrapper = styled.div`
 display: flex;
 flex-direction: column;
-background-color: cyan;
 width: 55%;
 margin-left: 40px;
 `;
@@ -138,12 +149,7 @@ width: 400px;
 const Info = styled.p`
 margin-top: -10px;
 `;
-const Ava = styled.div`
-object-fit: cover;
-width: 40px;
-height:40px;
-border-radius: 50%;
-`;
+
 const Ava2 = styled.div`
 display: flex;
 width: 110px;
@@ -160,7 +166,6 @@ width: 110px;
 height: 110px;
 object-fit:  cover;
 border-radius: 50%;
-
 `;
 const Sub = styled.h2`
 margin-top: 20px;
@@ -203,13 +208,19 @@ const Button = styled.button`
 width: 150px;
 height: 40px;
 outline: none;
-border: solid 2px #fff;
+border: solid 1.5px orange;
 background-color: transparent;
 font-size: 1rem;
 font-weight: 600;
 `;
 const Frame = styled.div`
+margin-top: 20px;
 
+`;
+const Holder = styled.div`
+display: flex;
+justify-content: space-between;
+width: 400px;
 `;
 const Top = styled.div`
 
@@ -218,5 +229,5 @@ const Where = styled.div`
 
 `;
 const Bottom = styled.div`
-
+margin-top: 20px;
 `;

@@ -22,7 +22,7 @@ export default function Header() {
 }
 
 const Container = styled.div`
-/* background-color: #AA3F5A; */
+/* background-color: #e3e3e3; */
 height: 60px;
 width: 100%;
 display: flex;

@@ -8,9 +8,9 @@ export default function ContentDetail() {
         <Wrapper>
             <Title>I will design top notch social media content</Title>
             <Tile>
-                <Ava />
+                <Av src='/assets/s4.jpg'/>
                 <Name>fernandobengua</Name>
-                <Level>Level 2 Seller</Level>
+                <Levels>Level 2 Seller</Levels>
                 <Rating>
                     <AiFillStar/>
                     <AiFillStar/>
@@ -71,6 +71,15 @@ export default function ContentDetail() {
 
 
 
+const Levels = styled.p`
+
+`;
+const Av = styled.img`
+width: 40px;
+height: 40px;
+object-fit:  cover;
+border-radius: 50%;
+`;
 const Subimage = styled.img`
 width: 100px;
 height: 70px;
@@ -104,9 +113,9 @@ display: flex;
 width: 75%;
 justify-content: space-between;
 align-items: center;
+margin-top: -20px;
 `;
 const Gallery = styled.div`
-background-color: brown;
 width: 100%;
 height: 450px;
 margin-top: 20px;
@@ -121,7 +130,6 @@ justify-content: space-between;
 width: 100%;
 `;
 const Seller = styled.div`
-background-color: gray;
 display: flex;
 justify-content: space-between;
 align-items: center;
@@ -131,7 +139,7 @@ const Info = styled.p`
 margin-top: -10px;
 `;
 const Ava = styled.div`
-background-color: red;
+object-fit: cover;
 width: 40px;
 height:40px;
 border-radius: 50%;
@@ -151,7 +159,6 @@ const SellerImg = styled.img`
 width: 110px;
 height: 110px;
 object-fit:  cover;
-background-color: white;
 border-radius: 50%;
 
 `;

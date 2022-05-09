@@ -9,7 +9,7 @@ export default function Home() {
       id: 1,
       title: "Find the perfect freelance services for your business",
       author: "Dev Lulu, Frontend Engineer",
-      image: "/assets/s1.jpg"
+      image: "/assets/s4.jpg"
     },
     {
       id: 2,
@@ -21,7 +21,7 @@ export default function Home() {
       id: 3,
       title: "The first market place in the whole Ajegunle",
       author: "Dev Blessing, Snr Engineer",
-      image: "/assets/s3.jpg"
+      image: "/assets/s1.jpg"
     },
     {
       id: 4,
@@ -48,11 +48,11 @@ export default function Home() {
     <>
     <Container>
       <Background>
-        <img src={slider[count % slider.length].image} alt="" />
+        <img src={slider[count%slider.length].image} alt="" />
       </Background>
       <Content>
         <Tag>
-          <Info>{slider[count % slider.length].title}</Info>
+          <Info>{slider[count%slider.length].title}</Info>
           <Border>
             <Span>Design</Span>
             <Span>Thinkng</Span>

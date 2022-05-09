@@ -3,7 +3,7 @@ const path = require('path')
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-      cb(null, 'uploads')
+      cb(null, '/uploads')
     },
     filename: function (req, file, cb) {
       const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9)
@@ -12,5 +12,6 @@ const storage = multer.diskStorage({
   })
   
   const upload = multer({ storage: storage }).single('avatar')
+  const image = multer({ storage: storage }).single('image')
 
-  module.exports = upload
+  module.exports = {upload, image}

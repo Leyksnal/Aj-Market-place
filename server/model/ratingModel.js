@@ -3,11 +3,7 @@ const ratingModel = mongoose.Schema({
     count:{
         type: Number
     },
-    seller:{
-        type: String
-    },
-    users: [{ type: mongoose.Schema.Types.ObjectId, ref: "users"}],
-    contents: [{ type: mongoose.Schema.Types.ObjectId, ref: "contents"}],
+    users: [{ type: mongoose.Schema.Types.ObjectId, ref: "users"}]
 }, {timestamps: true})
 
 module.exports = mongoose.Schema("contents", ratingModel)

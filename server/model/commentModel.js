@@ -10,4 +10,4 @@ const commentModel = mongoose.Schema({
     contents: [{ type: mongoose.Schema.Types.ObjectId, ref: "contents"}],
 }, {timestamps: true})
 
-module.exports = mongoose.Schema("contents", commentModel)
+module.exports = mongoose.model("contents", commentModel)

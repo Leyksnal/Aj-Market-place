@@ -37,7 +37,7 @@ const signInUser = async (req, res) =>{
         
     } catch (error) {
         res.status(500).json({
-            status: `Failed to get User`,
+            status: `Failed to sign`,
             message: error.message
         })
     }

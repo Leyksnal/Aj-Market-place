@@ -8,7 +8,7 @@ const userModel = mongoose.Schema({
         unique: true
     },
     password:{
-        type: String
+        type: Number
     },
     avatar:{
         type: String
@@ -25,4 +25,4 @@ const userModel = mongoose.Schema({
 }, {timestamps: true})
 
 
-module.exports = mongoose.Schema("users", userModel)
+module.exports = mongoose.model("users", userModel)

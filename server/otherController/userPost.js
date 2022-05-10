@@ -1,32 +1,32 @@
 const express = require('express')
 const router = express.Router()
 const cloudinary = require('../utils/cloudinary')
-const upload = require('../utils/multer')
+const { userImage } = require('../utils/multer')
 const bcrypt = require('bcrypt')
+const userModel = require('../model/userModel')
 
 
-router.post("/register", upload, async(req, res) =>{
+router.post("/register", userImage, async(req, res) =>{
     try {
-
         const {email, password, username} = req.body
         const salt = await bcrypt.genSalt(10)
         const hashed = await bcrypt.hash(password, salt)
-        const image = await cloudinary.uploader.upload(req.file.path)
+        const cloud = await cloudinary.uploader.upload(req.file.path)
         const createUser = await userModel.create({
             email,
-            password,
+            password: hashed,
             username,
-            avatar: image.secure_url,
-            avatatID: image.public_id,
+            avatar: cloud.secure_url,
+            avatatID: cloud.public_id,
             seller: false
         })
 
         res.status(201).json({
-            message: `memeber created`,
+            status: `memeber created`,
             data: createUser
         })
         
-    } catch (error) {
+    } catch (err) {
         res.status(500).json({
             message: err.message
         })
@@ -34,7 +34,7 @@ router.post("/register", upload, async(req, res) =>{
 })
 
 
-router.post("/register_join", upload, async(req, res) =>{
+router.post("/register_join", userImage, async(req, res) =>{
     try {
 
         const {email, password, username} = req.body
@@ -43,7 +43,7 @@ router.post("/register_join", upload, async(req, res) =>{
         const image = await cloudinary.uploader.upload(req.file.path)
         const createUser = await userModel.create({
             email,
-            password,
+            password: hashed,
             username,
             avatar: image.secure_url,
             avatatID: image.public_id,
@@ -63,7 +63,7 @@ router.post("/register_join", upload, async(req, res) =>{
 })
 
 
-router.patch("/:id/update", upload, async(req, res) =>{
+router.patch("/:id/update", userImage, async(req, res) =>{
     try {
 
         const {username} = req.body

@@ -6,4 +6,4 @@ const ratingModel = mongoose.Schema({
     users: [{ type: mongoose.Schema.Types.ObjectId, ref: "users"}]
 }, {timestamps: true})
 
-module.exports = mongoose.Schema("contents", ratingModel)
+module.exports = mongoose.model("content", ratingModel)

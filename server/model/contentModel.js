@@ -23,4 +23,4 @@ const contentModel = mongoose.Schema({
     users: [{ type: mongoose.Schema.Types.ObjectId, ref: "users"}]
 }, {timestamps: true})
 
-module.exports = mongoose.Schema("contents", contentModel)
+module.exports = mongoose.model("contents", contentModel)

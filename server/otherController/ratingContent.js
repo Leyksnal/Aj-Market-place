@@ -5,7 +5,7 @@ const userModel = require('../model/userModel')
 const ratingModel = require('../model/ratingModel')
 const verify = require('../utils/authorize')
 
-router.post('/:contentID/rating', verify, async (req, res) =>{
+router.post('/:id/rate/contentID', verify, async (req, res) =>{
     try {
 
         const contentData = await userModel.findById(req.params.contentID)

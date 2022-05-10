@@ -8,7 +8,7 @@ const userModel = mongoose.Schema({
         unique: true
     },
     password:{
-        type: String
+        type: Number
     },
     avatar:{
         type: String
